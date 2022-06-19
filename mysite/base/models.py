@@ -18,7 +18,7 @@ class Room(models.Model):
     # auto_now --> take a snapeshot every time we save this
     update = models.DateTimeField(auto_now=True)
     # auto_now_add --> only takes a timestamp when we first save or created
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now=True)
 
     # string representation
     def __str__(self):
@@ -30,7 +30,7 @@ class Message(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     body = models.TextField()
     update = models.DateTimeField(auto_now=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now=True)
 
     # string representation
     def __str__(self):
