@@ -5,10 +5,7 @@
 <ul>
   <li>
     {% for room in rooms %}
-    <spam
-      >{{ room.id }} -
-      <a href="{%url 'room' room.id%}"> {{ room.name }} </a></spam
-    >
+    <spam>{{ room.id }} - <a href="{%url 'room'%}"> {{ room.name }} </a></spam>
     {% endfor %}
   </li>
 </ul>
